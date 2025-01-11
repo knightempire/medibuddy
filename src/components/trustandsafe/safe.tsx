@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-
 // Define the component
-const TrustandSafe = () => {
+const Safe = () => {
   const [faqData, setFaqData] = useState([]);
 
   // Fetch FAQ data from the API
@@ -45,7 +44,7 @@ const TrustandSafe = () => {
   };
 
   return (
-    <section id="TrustandSafe" className="py-12 relative space-x-4 bg-[#ffffff]">
+    <section id="Safe" className="py-16 relative space-x-4 bg-[#ffffff]">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: "#050a4e" }}>
           How it works?
@@ -70,77 +69,18 @@ const TrustandSafe = () => {
             </div>
           ))}
         </div>
-
-
-        <div id="safe" className="py-12 relative space-x-4 bg-[#ffffff]">
-  <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: "#050a4e" }}>
-    100% Safe & Secure Lab Tests
-  </h2>
-
-
-  <div className="mt-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-  {/* Card 1 */}
-  <div className="flex flex-row items-start bg-sky-100 rounded-lg shadow-md p-2">
-    <div className="flex flex-col items-start justify-center mr-3">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/test.svg"
-        className="h-[45px] mb-2"
-        alt="Govt Approved"
-      />
-      <h3 className="text-xs sm:text-sm md:text-base text-gray-900">Govt. Approved Diagnostic Centres</h3>
-    </div>
-  </div>
-
-  {/* Card 2 */}
-  <div className="flex flex-row items-start bg-sky-100 rounded-lg shadow-md p-2">
-    <div className="flex flex-col items-start justify-center mr-3">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/temperature.svg"
-        className="h-[45px] mb-2"
-        alt="Temperature Check"
-      />
-      <h3 className="text-xs sm:text-sm md:text-base text-gray-900">Daily Temperature Check of all Technicians</h3>
-    </div>
-  </div>
-
-  {/* Card 3 */}
-  <div className="flex flex-row items-start bg-sky-100 rounded-lg shadow-md p-2">
-    <div className="flex flex-col items-start justify-center mr-3">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/sanitize.svg"
-        className="h-[45px] mb-2"
-        alt="Sanitize"
-      />
-      <h3 className="text-xs sm:text-sm md:text-base text-gray-900">Mandatory use of Mask & Sanitizers</h3>
-    </div>
-  </div>
-
-  {/* Card 4 */}
-  <div className="flex flex-row items-start bg-sky-100 rounded-lg shadow-md p-2">
-    <div className="flex flex-col items-start justify-center mr-3">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/spray.svg"
-        className="h-[45px] mb-2"
-        alt="Spray"
-      />
-      <h3 className="text-xs sm:text-sm md:text-base text-gray-900">Regular Disinfectation of Labs</h3>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-</div>
-
-     
       </div>
 
-   
+      <div className="container mx-auto py-16 px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: "#050a4e" }}>
+        100% Safe & Secure Lab Tests
+        </h2>
+
+    
+      </div>
     </section>
     
   );
 };
 
-export default TrustandSafe;
+export default Safe;
