@@ -35,10 +35,10 @@ export default function RootLayout({
 <meta property="og:type" content="website" />
 
 
-<link rel="icon" href="https://www.exploreiq.com/favicon.ico" />
+<link rel="icon" href="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/70/97/9b/70979b66-d536-5846-9395-7c792d9617b6/AppIcon-0-1x_U007emarketing-0-8-0-85-220-0.png/1200x600wa.png" />
 
         {/* Favicon and Apple Touch Icon */}
-        <link rel="icon" href="https://i.imgur.com/W97mSaU.png"  />
+        <link rel="icon" href="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/70/97/9b/70979b66-d536-5846-9395-7c792d9617b6/AppIcon-0-1x_U007emarketing-0-8-0-85-220-0.png/1200x600wa.png"  />
 
       </head>
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
