@@ -12,17 +12,10 @@ const Review = () => {
       try {
         const response = await fetch('https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config');
         const data = await response.json();
-        
-        // Log the fetched data to inspect its structure
-        console.log('Fetched Data:', data);
-        
-        // Extract the reviews data from the API response
+      
+       
         const reviewData = data[0]?.page_config.find(config => config.title === "What our Users say")?.props || [];
-        
-        // Log the review data to verify
-        console.log('Review Data:', reviewData);
-        
-        // Update the state with the reviews
+
         setReviews(reviewData);
       } catch (error) {
         console.error('Error fetching reviews:', error);
@@ -37,13 +30,13 @@ const Review = () => {
       setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
     }, 3000); // Slide every 3 seconds
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval); 
   }, [reviews]);
 
   // Function to handle reviews display for small devices
   const displaySmallDeviceReviews = () => {
     const currentReview = reviews[currentReviewIndex];
-    return [currentReview]; // Only show one review per time on small screens
+    return [currentReview]; 
   };
 
   // Function to handle reviews display for large devices

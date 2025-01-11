@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-// Define the component
+
 const Lifestyle = () => {
   const [data, setData] = useState<any>(null);
 
@@ -12,7 +12,6 @@ const Lifestyle = () => {
       try {
         const response = await fetch("https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config");
         const result = await response.json();
-        // Access the page_config array and filter for the LifeStyle Health Check Packages
         const lifestylePackage = result[0]?.page_config?.find((item: any) => item.title === "LifeStyle Health Check Packages");
         setData(lifestylePackage); // Store the relevant data in state
       } catch (error) {

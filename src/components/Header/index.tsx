@@ -37,7 +37,7 @@ const Header = () => {
 <div className="flex justify-between items-center p-4 border-t">
   {/* Left side: Place name (Chennai, Tamil Nadu) and Geo Icon */}
   <div className="flex flex-col">
-  <div className="flex flex-row items-center "> {/* Adjusted to horizontal layout */}
+  <div className="flex flex-row items-center "> 
     <div className="flex flex-col items-start space-y-1">
       <span className="text-black text-sm font-medium pr-2">T.nagar</span>
     </div>
@@ -96,7 +96,7 @@ const Header = () => {
     <input
       type="text"
       placeholder="Find lab tests, diagnostics centres"
-      className="w-full px-4 py-2 border border-black text-black bg-white rounded-lg focus:border-sky-400 pr-10 text-sm" // Ensure smaller text for better fit on mobile
+      className="w-full px-4 py-2 border border-black text-black bg-white rounded-lg focus:border-sky-400 pr-10 text-sm" 
     />
     {/* Search Icon */}
     <svg xmlns="http://www.w3.org/2000/svg" className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
