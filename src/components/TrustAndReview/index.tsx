@@ -118,7 +118,7 @@ const Review = () => {
             {displaySmallDeviceReviews().map((review, index) => (
               <div
                 key={index}
-                className="w-full h-80 bg-white rounded-xl shadow-lg p-6 space-y-4 hover:shadow-xl transition-shadow duration-300 mb-4"
+                className="w-full h-90 bg-white rounded-xl shadow-lg p-6 space-y-4 hover:shadow-xl transition-shadow duration-300 mb-4"
               >
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                   <div className="flex items-center space-x-1">
@@ -157,7 +157,12 @@ const Review = () => {
               </div>
             ))}
           </div>
-
+          <div className="flex justify-center gap-2 mt-6 sm:hidden">
+            <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+            <div className="h-2 w-2 rounded-full bg-gray-200"></div>
+            <div className="h-2 w-2 rounded-full bg-gray-200"></div>
+            <div className="h-2 w-2 rounded-full bg-gray-200"></div>
+          </div>
           {/* Displaying large device reviews */}
           <div className="hidden sm:block overflow-x-auto">
             <div className="flex flex-nowrap gap-x-4">
@@ -203,6 +208,7 @@ const Review = () => {
                 </div>
               ))}
             </div>
+            
           </div>
         </div>
       </div>
