@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 
 // Define the component
-const TrustandSafe = () => {
+const WorkandSafe = () => {
   const [faqData, setFaqData] = useState([]);
 
   // Fetch FAQ data from the API
@@ -45,7 +45,7 @@ const TrustandSafe = () => {
   };
 
   return (
-    <section id="TrustandSafe" className="py-12 relative space-x-4 bg-[#ffffff]">
+    <section id="WorkandSafe" className="py-8 relative space-x-4 bg-[#ffffff]">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: "#050a4e" }}>
           How it works?
@@ -143,4 +143,4 @@ const TrustandSafe = () => {
   );
 };
 
-export default TrustandSafe;
+export default WorkandSafe;
