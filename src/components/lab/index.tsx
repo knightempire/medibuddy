@@ -13,20 +13,44 @@ const Lab = () => {
       {
         rating: 4.5,
         ratingsCount: 120,
+        location: "Kormanangala, Bangalore",
+        name: "Apollo Diagnostics",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0diB7MFBQdkgwnuh9TfyKSD7yA3hZVfR3Wg&s",
+      },
+      {
+        rating: 4.0,
+        ratingsCount: 85,
+        location: "Kanchipuram",
+        name: "CINDRELLA DIAGNOSTICS & SCAN CENTRE",
+        image: "https://lh5.googleusercontent.com/p/AF1QipPoeeKoVvokpdARSlTlU2x_77q1_W45ZFyOJdL4=w408-h544-k-no",
+      },
+      {
+        rating: 3.8,
+        ratingsCount: 95,
+        location: "Chennai",
+        name: "Hitech Diagnostics",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGodMKHyXeaHNK8U3G-OElwyYneBb3_3Sjkw&s",
+      },
+      {
+        rating: 4.2,
+        ratingsCount: 105,
+        location: "Location TBD",
+        name: "Redcliffe Labs",
+        image: "https://medgatetoday.com/wp-content/uploads/2021/12/REDCLIFFE-HSR-Layout-.jpeg",
+      },
+      {
+        rating: 4.0,
+        ratingsCount: 120,
         location: "Bangalore",
-        name: "John Doe",
+        name: "Medentzz",
+        image: "https://content.jdmagicbox.com/v2/comp/bangalore/i7/080pxx80.xx80.130411160047.v3i7/catalogue/medentzz-poly-clinic-and-diagnostic-lab-rt-nagar-bangalore-aids-diagnostic-centres-z7cyjphgaa.jpg",
       },
       {
-        rating: 5,
-        ratingsCount: 80,
-        location: "Mumbai",
-        name: "Jane Smith",
-      },
-      {
-        rating: 3,
-        ratingsCount: 45,
-        location: "Delhi",
-        name: "Amit Kumar",
+        rating: 4.1,
+        ratingsCount: 150,
+        location: "Bangalore",
+        name: "Aarthi Scans",
+        image: "https://content.jdmagicbox.com/v2/comp/bangalore/f9/080pxx80.xx80.180827073046.a4f9/catalogue/aarthi-scans-and-labs-rajajinagar-2nd-stage-bangalore-diagnostic-centres-vqwaks33vm.jpg",
       },
     ];
 
@@ -85,14 +109,20 @@ const Lab = () => {
                 className="w-full h-auto bg-white rounded-xl shadow-lg p-6 space-y-4 hover:shadow-xl transition-shadow duration-300 mb-4"
               >
                 <div className="relative">
-                  {/* Image with rating in the bottom-right corner */}
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0diB7MFBQdkgwnuh9TfyKSD7yA3hZVfR3Wg&s"
-                    alt="Review Image"
-                    className="w-full h-48 object-cover rounded-lg"
-                  />
+                  {/* Ensure review is defined and has an image */}
+                  {review && review.image ? (
+                    <img
+                      src={review.image}
+                      alt="Review Image"
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  ) : (
+                    <div className="w-full h-48 bg-gray-200 rounded-lg flex justify-center items-center text-gray-600">
+                      No Image Available
+                    </div>
+                  )}
 
-                  {/* Rating at the bottom-right, no gap */}
+                  {/* Rating at the bottom-right */}
                   <div className="absolute bottom-0 right-0 bg-black text-white px-2 py-1 rounded-bl-lg text-xs flex items-center space-x-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold" className="bi bi-star-fill" viewBox="0 0 16 16">
                       <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
@@ -110,7 +140,7 @@ const Lab = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                   </svg>
-                  <span>{review?.location || "Bangalore"}</span>
+                  <span>{review?.location}</span>
                 </div>
 
                 {/* Updated Timing with clock icon */}
@@ -134,14 +164,20 @@ const Lab = () => {
                   className="w-1/3 sm:w-1/3 lg:w-1/3 xl:w-1/5 flex-grow h-auto bg-white rounded-xl shadow-lg p-6 space-y-4 hover:shadow-xl transition-shadow duration-300 mb-4"
                 >
                   <div className="relative">
-                    {/* Image with rating in the bottom-right corner */}
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0diB7MFBQdkgwnuh9TfyKSD7yA3hZVfR3Wg&s"
-                      alt="Review Image"
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
+                    {/* Ensure review is defined and has an image */}
+                    {review && review.image ? (
+                      <img
+                        src={review.image}
+                        alt="Review Image"
+                        className="w-full h-48 object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="w-full h-48 bg-gray-200 rounded-lg flex justify-center items-center text-gray-600">
+                        No Image Available
+                      </div>
+                    )}
 
-                    {/* Rating at the bottom-right, no gap */}
+                    {/* Rating at the bottom-right */}
                     <div className="absolute bottom-0 right-0 bg-black text-white px-2 py-1 rounded-bl-lg text-xs flex items-center space-x-1">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold" className="bi bi-star-fill" viewBox="0 0 16 16">
                         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
@@ -159,7 +195,7 @@ const Lab = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-geo-alt" viewBox="0 0 16 16">
                       <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                     </svg>
-                    <span>{review?.location || "Bangalore"}</span>
+                    <span>{review?.location}</span>
                   </div>
 
                   {/* Updated Timing with clock icon */}
