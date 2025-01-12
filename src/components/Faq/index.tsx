@@ -27,7 +27,7 @@ const Faq = () => {
     };
 
     fetchData();
-  }, []);
+  }, []);   
 
   // Toggle the expanded/collapsed state for a given FAQ
   const toggleFAQ = (index) => {
