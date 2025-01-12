@@ -1,8 +1,11 @@
 "use client";
 
+
 import { useEffect, useState } from "react";
 
-const Review = () => {
+
+// Define the component
+const Lab = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [reviews, setReviews] = useState([]);
 
@@ -48,66 +51,15 @@ const Review = () => {
     ];
   };
 
+
   return (
-    <section id="Review" className="py-12 relative bg-[#ffffff]">
-<div id="safe" className="container mx-auto px-4">
-
-  <div id="heading" className="flex justify-between items-start mt-4">
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: "#050a4e" }}>
-      Trusted by <span className="text-blue-500">20,00,000+ </span> Users Every month
-    </h2>
-    <img
-      src="https://www.medibuddy.in/assets/icons/trust.svg"
-      alt="Trust Icon"
-      className="w-16 h-16 sm:w-24 sm:h-24 mt-4 sm:mt-0 sm:ml-4 ml-auto"
-    />
-  </div>
-
-
-
-
-  <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-8">
-    <div className="flex flex-col items-center">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/telescope.svg"
-        alt="200+ Approved Diagnostic Centres"
-        className="w-16 h-16 sm:w-24 sm:h-24 mb-4"
-      />
-      <p className="text-center text-sm sm:text-lg text-black">200+ Approved Diagnostic Centres</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/tubes.svg"
-        alt="1200+ Lab Tests Offered"
-        className="w-16 h-16 sm:w-24 sm:h-24 mb-4"
-      />
-      <p className="text-center text-sm sm:text-lg text-black">1200+ Lab Tests Offered</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/locations.svg"
-        alt="1200+ Pincodes Covered"
-        className="w-16 h-16 sm:w-24 sm:h-24 mb-4"
-      />
-      <p className="text-center text-sm sm:text-lg text-black">1200+ Pincodes Covered</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <img
-        src="https://www.medibuddy.in/assets/icons/labs/trust/doctor.svg"
-        alt="Verified Experts for Diagnosis"
-        className="w-16 h-16 sm:w-24 sm:h-24 mb-4"
-      />
-      <p className="text-center text-sm sm:text-lg text-black">Verified Experts for Diagnosis</p>
-    </div>
-  </div>
-</div>
-
-
-
-
-      <div className="container mx-auto px-4 py-12">
+    <section
+      id="Lab"
+      className="py-16 md:py-20 lg:py-28 relative bg-[#ffffff]"
+    >
+   <div className="container mx-auto px-4 py-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: "#050a4e" }}>
-          What Our Users Say
+       Labs Visited
         </h2>
 
         <div className="mt-8">
@@ -210,4 +162,4 @@ const Review = () => {
   );
 };
 
-export default Review;
+export default Lab;

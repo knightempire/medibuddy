@@ -8,6 +8,7 @@ import WorkandSafe from "@/components/WorkAndSafe";
 import Review from "@/components/TrustAndReview";
 import Faq from "@/components/Faq";
 import Footer  from "@/components/footer";
+import Lab from "@/components/lab";
 
 import { Metadata } from "next";
 
@@ -18,8 +19,9 @@ export default function Home() {
       <ScrollUp />
       <Hero />
      <Features />
-    <Lifestyle />
+<Lab />
     <Review />
+    <Lifestyle />
     <WorkandSafe />
     <Faq />
     <Footer />
