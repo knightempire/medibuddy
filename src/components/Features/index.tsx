@@ -191,7 +191,8 @@ const Features = () => {
                         <span className="text-center text-sm text-gray-800 font-bold">
                           <span>Includes:</span>
                         </span>
-                        <div className="flex items-center space-x-2">
+            
+                        <div className="flex items-center space-x-2"> 
                           <img src="https://views.medibuddy.in/labs/HomeScreenIcons/radiology.png" alt="Radiology" className="w-6 h-6" />
                           <span className="text-sm text-gray-600">Radiology</span>
                         </div>
