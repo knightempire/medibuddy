@@ -115,17 +115,11 @@ const Features = () => {
     <section id="features" className="py-16 md:py-20 lg:py-28 relative bg-[#e8f2fe]">
       <div className="container mx-auto px-4">
         {/* Flex container for the title */}
-        <div className="flex justify-between items-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-left text-black" style={{ color: '#050A4E' }}>
-            Featured Health Check-ups
+        <div className="flex justify-between items-center mb-8">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold text-left" style={{ color: "#050a4e" }}>
+          Featured Health Check-ups
           </h2>
-
-          {/* View All Button */}
-          <button
-            className="text-blue-800 font-medium text-sm mt-2 md:mt-0"
-            onClick={() => console.log("View All Clicked")}
-            style={{ border: "none", background: "none" }}
-          >
+          <button className="text-blue-500 font-semibold text-sm sm:text-base">
             View All
           </button>
         </div>
